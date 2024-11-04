@@ -26,8 +26,12 @@ The detail will be in https://github.com/pandapanda3/huggingface-ghcr
 `
 
 ## create a service principal in Azure and assign it a specific role with defined scope
-`az ad sp create-for-rbac --name "my-ml-service-principal" --role Contributor --scopes /subscriptions/04c1b27c-fcd8-43ba-96a2-cfe04a58d0a5
-`
+
+Use the following command to obtain `AZURE_APP_ID`, `AZURE_PASSWORD`, and `AZURE_TENANT`:
+
+```bash
+az ad sp create-for-rbac --name "my-ml-service-principal" --role Contributor --scopes /subscriptions/04c1b27c-fcd8-43ba-96a2-cfe04a58d0a5
+```
 
 - **`az ad sp create-for-rbac`**:
   - This part of the command is telling Azure to create a **service principal (SP)** that can be used for **role-based access control (RBAC)**.
